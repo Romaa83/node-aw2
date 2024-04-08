@@ -1,3 +1,3 @@
 import * as modulo from "./modulos.mjs";
 
-console.log(modulo.carrera)
+console.log(modulo.obtenerCarrera())
