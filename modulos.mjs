@@ -5,4 +5,5 @@ function obtenerCarrera(){
 }
 //como objeto
 export {materia, carrera, obtenerCarrera}
+//por defecto y solo puede haber uno
 //export default materia
