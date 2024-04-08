@@ -1,13 +1,14 @@
+//Recibe parametros
 const suma = (a,b) => {
     return a + b
 }
-//console.log(suma(2,2))
 export {suma}
 
-export default suma
+// export default suma
+//No recibe parametros
 
 const si = () => {
-    return no
+    return "no"
 }
 
 export {si}
