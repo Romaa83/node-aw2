@@ -4,7 +4,6 @@ const suma = (a,b) => {
 }
 export {suma}
 
-// export default suma
 //No recibe parametros
 
 const si = () => {
