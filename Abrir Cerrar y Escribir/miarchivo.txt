@@ -1,0 +1,11 @@
+Procesador
+[{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":8171062,"nice":0,"sys":5329250,"idle":100705796,"irq":2264781}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":6865312,"nice":0,"sys":1428031,"idle":105912578,"irq":84953}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":11834640,"nice":0,"sys":2280031,"idle":100091250,"irq":73921}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":8259750,"nice":0,"sys":1144796,"idle":104801375,"irq":35812}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":10362468,"nice":0,"sys":1693406,"idle":102150046,"irq":65078}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":6037875,"nice":0,"sys":1061593,"idle":107106453,"irq":37187}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":9400562,"nice":0,"sys":1713625,"idle":103091734,"irq":62921}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":6399531,"nice":0,"sys":941062,"idle":106865328,"irq":32031}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":9451718,"nice":0,"sys":1237109,"idle":103517093,"irq":54500}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":6480359,"nice":0,"sys":912015,"idle":106813531,"irq":61312}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":7996468,"nice":0,"sys":1336906,"idle":104872531,"irq":41609}},{"model":"Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz","speed":2904,"times":{"user":8812218,"nice":0,"sys":966265,"idle":104427421,"irq":32796}}]
+
+Memoria Libre
+6.8529205322265625
+
+Memoria Total
+15.939464569091797
+
+Memoria Usada
+9.086544036865234
