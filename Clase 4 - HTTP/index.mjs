@@ -6,10 +6,12 @@ const Servidor = http.createServer((peticion,respuesta)=>{
     const metodo = peticion.method
     if (metodo === 'GET' && ruta === "/") {
         respuesta.setHeader('Content-Type','text/plan')
+        respuesta.statusCode = 200;
         respuesta.end('<h1>No<h1>')
         return;
     }
     else {
+        respuesta.statusCode = 404;
         respuesta.end('No encontrada')
     }
     // if (ruta === "/") {
