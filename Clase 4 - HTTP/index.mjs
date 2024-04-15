@@ -5,7 +5,8 @@ const Servidor = http.createServer((peticion,respuesta)=>{
     const ruta = peticion.url;
     const metodo = peticion.method
     if (metodo === 'GET' && ruta === "/") {
-        respuesta.end('<h1>Si<h1>')
+        respuesta.setHeader('Content-Type','text/plan')
+        respuesta.end('<h1>No<h1>')
         return;
     }
     else {
