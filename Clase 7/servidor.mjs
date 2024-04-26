@@ -10,7 +10,7 @@ async function gesIndex(peticion, respuesta){
     }
     catch (err){
         respuesta.statusCode = 404
-        respuesta.end('ASDADS',err)
+        respuesta.end('ASDADS')
     }
 }
 
@@ -25,7 +25,7 @@ async function gesRecursos(peticion, respuesta){
     }
     catch (err){
         respuesta.statusCode = 404
-        respuesta.end('eRROR',err)
+        respuesta.end('error')
     }
 }
 
