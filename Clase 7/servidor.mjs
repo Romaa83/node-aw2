@@ -29,15 +29,28 @@ async function gesRecursos(peticion, respuesta){
     }
 }
 
+async function gesJson(peticion,respuesta){
+    try{
+        const ruta = path.join('publica', 'assets', 'personas.json')
+        const archivo = await fsp.readFile(ruta)
+        respuesta.end(archivo)
+    }
+    catch{
+        respuesta.end('error')
+    }
+}
+
 const Servidor = http.createServer((peticion,respuesta)=>{
     if (peticion.method === "GET") {
         if (peticion.url === '/' || peticion.url === '/index.html') {
             gesIndex(peticion, respuesta)
          }
+         else if (peticion.url === "/productos") {
+            gesJson(peticion,respuesta)
+         }
          else{
             gesRecursos(peticion, respuesta)
          }
-          //return;
     }
 })
 Servidor.listen(3000)
