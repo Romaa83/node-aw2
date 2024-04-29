@@ -91,9 +91,7 @@ const Servidor = http.createServer((peticion,respuesta)=>{
                 console.log(datosFormulario)
                 respuesta.end(datosFormulario)
             })
-
-
-            respuesta.end("Ruta Encontrada")
+            respuesta.end(datosFormulario)
          }
          else if (peticion.url === "/productos") {
             gesJson(peticion,respuesta)
