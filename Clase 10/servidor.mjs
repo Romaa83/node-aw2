@@ -26,9 +26,9 @@ const server = http.createServer((peticion, respuesta)=>{
     const metodo = peticion.method
     const rutaPeticion = peticion.url
     if (metodo === 'GET') {
-        const url = new URL('http://' + peticion.headers.host + rutaPeticion)
+        //const url = new URL('http://' + peticion.headers.host + rutaPeticion)
         const ruta = parse(rutaPeticion)
-        console.log(url, ruta)
+        console.log(ruta)
         if (rutaPeticion === '/productos') {
             if(productosv1){
                 respuesta.setHeader('Content-Type','application/json')
@@ -40,6 +40,19 @@ const server = http.createServer((peticion, respuesta)=>{
                 respuesta.end("Contenido no encontrado")
             }
         }
+        else if (rutaPeticion.match('/productos')) {
+            const id = parse(rutaPeticion).base
+            console.log(id)
+            const datosJson = productosv1.productos.find((productos) => {
+                return Number(productos.id) === Number(id)
+            })
+            //console.log(datosJson)
+            const respuestaJson = {
+                productos:[datosJson] 
+            }
+            respuesta.end(JSON.stringify(respuestaJson))
+        }
+        //
     }
 })
 

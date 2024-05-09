@@ -1,5 +1,7 @@
-[
-    { "id": 1 ,"Nombre": "Juan Pérez", "Dni": "12345678A" },
-    { "id": 2 ,"Nombre": "María García", "Dni": "87654321B" },
-    { "id": 3 ,"Nombre": "Luis Rodríguez", "Dni": "13579246C" }
+{
+  "productos": [
+    { "id": 1, "Nombre": "Juan Pérez", "Dni": "12345678A" },
+    { "id": 2, "Nombre": "María García", "Dni": "87654321B" },
+    { "id": 3, "Nombre": "Luis Rodríguez", "Dni": "13579246C" }
   ]
+}
