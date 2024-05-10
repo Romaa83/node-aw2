@@ -68,7 +68,7 @@ const server = http.createServer((peticion, respuesta)=>{
             const rutaJSON = path.join('api', 'v1', 'datos.json')
             const nuevoProducto = JSON.parse(datos)
             productosv1.productos.push(nuevoProducto)
-            await fsp.writeFile(rutaJSON, json.stringify(datos))
+            await fsp.writeFile(rutaJSON, json.stringify(productosv1))
             respuesta.end()
         })
     }
