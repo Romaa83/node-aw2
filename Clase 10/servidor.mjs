@@ -54,6 +54,29 @@ const server = http.createServer((peticion, respuesta)=>{
         }
         //
     }
+    else if (metodo === "POST") {
+        let datos = '';
+        peticion.on('data', (pedacitos)=>{
+            datos += pedacitos
+        })
+        peticion.on('error', (error)=>{
+            respuesta.statusCode= 404
+            respuesta.end('error')
+            console.log("error")
+        })
+        peticion.on('end', async ()=>{
+            const rutaJSON = path.join('api', 'v1', 'datos.json')
+            const nuevoProducto = JSON.parse(datos)
+            productosv1.productos.push(nuevoProducto)
+            await fsp.writeFile(rutaJSON, json.stringify(datos))
+            respuesta.end()
+        })
+    }
+    else{
+        respuesta.setHeader('Content-Type','text/plain')
+        respuesta.statusCode = 404
+        respuesta.end('god')
+    }
 })
 
 server.listen(puerto)
