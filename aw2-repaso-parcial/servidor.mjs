@@ -33,6 +33,21 @@ async function gesRecursos (peticion, respuesta){
     }
 }
 
+async function escribirJson(peticion,respuesta){
+    const ruta = path.join('saludos','saludos.json')
+    try {
+        await fsp.writeFile(ruta,JSON.stringify(datos))
+        respuesta.statusCode= 200
+        respuesta.setHeader('Content-Type','application/json')
+        respuesta.end("Archivo generado con exito")
+    } catch (error) {
+            respuesta.statusCode = 404
+            respuesta.end('Error al generar el archivo')
+    }
+}
+
+const datos = {"saludos":["Buenos días","Buenas tardes","Buenas noches"]}
+
 const server = http.createServer((peticion, respuesta)=>{
     if (peticion.method === 'GET') {
         if (peticion.url === '/'){
@@ -44,7 +59,7 @@ const server = http.createServer((peticion, respuesta)=>{
     }
     else if (peticion.method === 'POST') {
         if (peticion.url === '/generar') {
-            
+            escribirJson(peticion,respuesta)
         }
         else{
             respuesta.end("si")
