@@ -3,6 +3,14 @@ import fsp from "node:fs/promises"
 import path from "node:path"
 
 const puerto = 3000
+const mime = {
+    '.jpg':'image/jpeg;charset=utf-8',
+    '.jpeg':'image/jpeg;charset=utf-8',
+    '.png':'image/png;charset=utf-8',
+    '.json':'application/json;charset=utf-8',
+    '.js':'application/javascript;charset=utf-8',
+    '.css':'text/css;charset=utf-8'
+}
 
 async function gesIndex(peticion, respuesta){
     try{
@@ -22,9 +30,11 @@ async function gesIndex(peticion, respuesta){
 async function gesRecursos (peticion, respuesta){
     try{
         const ruta = path.join('publica',peticion.url)
+        const extension = path.extname(ruta)
+        const extMime = mime[extension]
         const archivo = await fsp.readFile(ruta)
         respuesta.statusCode = 200
-        respuesta.setHeader('.css','text/css;charset=utf-8')
+        respuesta.setHeader('Content-Type',extMime)
         respuesta.end(archivo)
     }
     catch(err){
