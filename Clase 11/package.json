@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon servidor.mjs"
+    "dev": "nodemon servidor.mjs",
+    "dev:rutas":"nodemon servidor-rutas.mjs",
+    "dev:parametros":"nodemon servidor-parametros.mjs"
   },
   "author": "",
   "license": "ISC",
