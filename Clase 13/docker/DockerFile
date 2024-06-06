@@ -1,0 +1,8 @@
+#Que imagen utilizar
+FROM postgres:latest
+
+#Copia archivo al contenedor
+COPY tienda.sql /docker-entrypoint-initdb.d/
+
+#Documenta el puerto a exponer
+EXPOSE 5432
